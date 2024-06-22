@@ -174,7 +174,9 @@ Here are some example requests and responses:
 **Request:**
 
 ```sh
-curl -X GET "http://localhost:8000/v1/api/users" -H "accept: application/json"
+curl -X GET "http://localhost:8000/v1/api/users" \
+-H "accept: application/json" \
+-H "Authorization: Bearer {your_access_token}"
 ```
 
 **Response:**
@@ -191,7 +193,11 @@ curl -X GET "http://localhost:8000/v1/api/users" -H "accept: application/json"
 **Request:**
 
 ```sh
-curl -X POST "http://localhost:8000/v1/api/tasks" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"title\": \"New Task\", \"description\": \"Task description\", \"priority\": 3 }"
+curl -X POST "http://localhost:8000/v1/api/tasks" \
+-H "accept: application/json" \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {your_access_token}" \
+-d '{ "title": "New Task", "description": "Task description", "status": "todo", "priority": 3 }'
 ```
 
 **Response:**
@@ -208,7 +214,7 @@ curl -X POST "http://localhost:8000/v1/api/tasks" -H "accept: application/json" 
 **Request:**
 
 ```sh
-curl -X POST "http://localhost:8000/v1/api/user" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"username\": \"User1\", \"password\": \"1\" }"
+curl -X POST "http://localhost:8000/v1/api/login_check" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"username\": \"User1\", \"password\": \"1\" }"
 ```
 
 **Response:**
