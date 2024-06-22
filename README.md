@@ -49,12 +49,6 @@ Follow these steps to download and set up the project:
     php bin/console doctrine:fixtures:load
     ```
 
-## Running Tests
-To run tests, use the following command:
-```sh
-php bin/phpunit
-```
-
 ## Using the API
 
 This API provides endpoints for managing users and tasks. Below is the documentation for the available endpoints:
