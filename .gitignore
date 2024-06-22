@@ -1,0 +1,18 @@
+# Symfony cache directory
+/var/
+
+# Composer dependencies
+/vendor/
+
+# IDE specific files
+/.idea/
+/.vscode/
+
+# My readme
+/readme-delete.txt
+
+# Database
+/data
+
+# Migrations
+/migrations/*.php

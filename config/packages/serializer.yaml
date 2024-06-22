@@ -1,0 +1,4 @@
+framework:
+  serializer:
+    default_context:
+      ignored_attributes: ['user']

@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./apache/symfony.conf:/etc/apache2/sites-available/000-default.conf
+    networks:
+      - app-network
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: tasksapi
+    ports:
+      - "3306:3306"
+#      - "3307:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
