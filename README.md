@@ -53,6 +53,10 @@ Follow these steps to download and set up the project:
     php bin/console doctrine:fixtures:load
     ```
 
+## OpenAPI Documentation
+
+The OpenAPI documentation file is located at `/public/openapi.json`.
+
 ## Using the API
 
 This API provides endpoints for managing users and tasks. Below is the documentation for the available endpoints:
