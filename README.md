@@ -31,20 +31,24 @@ Follow these steps to download and set up the project:
     ```sh
     docker-compose up -d
     ```
-4. Create the database.
+4. Go into the PHP container.
+    ```sh
+    sudo docker exec -it {CONTAINER ID} bash
+    ```
+5. Create the database.
     ```sh
     php bin/console doctrine:database:create
     ```
-5. Make migration.
+6. Make migration.
     ```sh
     mkdir migrations
     php bin/console make:migration
     ```
-6. Migrate migration.
+7. Migrate migration.
     ```sh
     php bin/console doctrine:migrations:migrate
     ```
-7. Populate the database with sample data.
+8. Populate the database with sample data.
     ```sh
     php bin/console doctrine:fixtures:load
     ```
