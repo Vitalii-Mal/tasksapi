@@ -1,10 +1,7 @@
 # Todo List API
 
 ## Project Description
-This is a REST API for managing users and tasks. It allows users to perform various operations on tasks, such as creating, editing, marking as completed, and deleting tasks. Users can also be managed through this API.
-
-## Introduction
-The Todo List API is designed to help developers manage tasks and users efficiently. It is built with scalability and flexibility in mind, allowing for easy integration with other applications.
+This is a REST API for managing users and tasks. It allows users to perform various operations on tasks, such as creating, editing, marking as completed, and deleting tasks. Additionally, tasks can be organized into a hierarchical tree structure, allowing for the creation of subtasks. Users can also be managed through this API.
 
 ## Environment Requirements
 This project utilizes Docker containers for its environment setup.
